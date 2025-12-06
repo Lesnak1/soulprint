@@ -1,5 +1,5 @@
 // IMPORTANT: Update ROOT_URL after deploying to Vercel
-const ROOT_URL = process.env.NEXT_PUBLIC_URL || "https://soulprint.vercel.app";
+const ROOT_URL = process.env.NEXT_PUBLIC_URL || "https://soulprint-three.vercel.app";
 
 export const minikitConfig = {
     accountAssociation: {
