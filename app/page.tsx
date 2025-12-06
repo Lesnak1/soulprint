@@ -156,6 +156,24 @@ export default function Home() {
                     />
                 )}
 
+                {/* Follow Builder Section */}
+                <div className="builder-section">
+                    <div className="builder-card">
+                        <span className="builder-label">Built by</span>
+                        <div className="builder-info">
+                            <span className="builder-name">@heleknax</span>
+                        </div>
+                        <a
+                            href="https://warpcast.com/heleknax"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-follow"
+                        >
+                            <span>👤</span> Follow Builder
+                        </a>
+                    </div>
+                </div>
+
                 {/* Footer */}
                 <footer className="footer">
                     <p className="footer-text">

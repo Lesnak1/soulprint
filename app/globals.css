@@ -818,6 +818,81 @@ body {
   box-shadow: 0 0 10px var(--emerald-glow);
 }
 
+/* ==================== BUILDER SECTION ==================== */
+
+.builder-section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.builder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.builder-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.builder-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.builder-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.builder-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-follow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-button);
+}
+
+.btn-follow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5);
+}
+
+.btn-follow span {
+  font-size: 16px;
+}
+
 /* ==================== FOOTER ==================== */
 
 .footer {
