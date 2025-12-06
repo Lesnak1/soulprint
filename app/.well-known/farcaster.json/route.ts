@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 
-// Hosted Manifest from Farcaster Developer Tools - CORRECT FORMAT
+// Hosted Manifest - Complete with noindex field
 const manifest = {
     "frame": {
         "name": "SOULPRINT",
         "version": "1",
         "iconUrl": "https://soulprint-three.vercel.app/icon.png",
-        "homeUrl": "https://soulprint-three.vercel.app/",
+        "homeUrl": "https://soulprint-three.vercel.app",
         "imageUrl": "https://soulprint-three.vercel.app/hero.png",
         "buttonTitle": "Analyze My DNA",
         "splashImageUrl": "https://soulprint-three.vercel.app/splash.png",
@@ -23,7 +23,8 @@ const manifest = {
         "tagline": "Discover Your Blockchain DNA",
         "ogTitle": "SOULPRINT - Your On-Chain DNA",
         "ogDescription": "Analyze your on-chain activity and discover your unique digital DNA.",
-        "ogImageUrl": "https://soulprint-three.vercel.app/hero.png"
+        "ogImageUrl": "https://soulprint-three.vercel.app/hero.png",
+        "noindex": false
     },
     "accountAssociation": {
         "header": "eyJmaWQiOjMwNTM2OSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDRhNmVBQWUxMTkyQkM4Mzg5OTE5ZDRBMmNFQjZCRjcxMkQyNTJGODMifQ",
