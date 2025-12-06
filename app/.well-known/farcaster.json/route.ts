@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// Hosted Manifest from Farcaster Developer Tools
+// Hosted Manifest from Farcaster Developer Tools - CORRECT FORMAT
 const manifest = {
     "frame": {
         "name": "SOULPRINT",
@@ -27,8 +27,8 @@ const manifest = {
     },
     "accountAssociation": {
         "header": "eyJmaWQiOjMwNTM2OSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDRhNmVBQWUxMTkyQkM4Mzg5OTE5ZDRBMmNFQjZCRjcxMkQyNTJGODMifQ",
-        "payload": "eyJkb21haW4iOiJodHRwczovL3NvdWxwcmludC10aHJlZS52ZXJjZWwuYXBwLyJ9",
-        "signature": "CR1666q+EfS2BmbzIaotECx9mWX2jg7wJDd5k9eJp58Y1kTSFksa1zLQF86gWZGNA0xBUYzL3OJ1eTwz88FZ5Rs="
+        "payload": "eyJkb21haW4iOiJzb3VscHJpbnQtdGhyZWUudmVyY2VsLmFwcCJ9",
+        "signature": "n+ebmqiyyEZatYAtKi9B9bsQfX5849CjeNNbr0wJiRkQe3yQDLBjP8dpJu0hY/g1mCW5AOCfci27RkaVMDgOSBw="
     }
 };
 
