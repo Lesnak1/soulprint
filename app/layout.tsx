@@ -23,14 +23,20 @@ export const metadata: Metadata = {
         apple: '/icon.png',
     },
     other: {
-        'fc:frame': 'vNext',
-        'fc:frame:image': `${APP_URL}/hero.png`,
-        'fc:frame:button:1': 'Analyze My DNA',
-        'fc:frame:button:1:action': 'launch_frame',
-        'fc:frame:button:1:target': APP_URL,
-        'of:version': 'vNext',
-        'of:accepts:farcaster': 'vNext',
-        'of:image': `${APP_URL}/hero.png`,
+        'fc:miniapp': JSON.stringify({
+            version: "1",
+            imageUrl: `${APP_URL}/hero.png`,
+            button: {
+                title: "Analyze My DNA",
+                action: {
+                    type: "launch_frame",
+                    name: "SOULPRINT",
+                    url: APP_URL,
+                    splashImageUrl: `${APP_URL}/splash.png`,
+                    splashBackgroundColor: "#0A0A0F"
+                }
+            }
+        }),
     },
 };
 
