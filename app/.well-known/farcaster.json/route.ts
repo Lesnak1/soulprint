@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// Hosted Manifest from Farcaster Developer Tools
+// Complete Farcaster Manifest with all required metadata
 const manifest = {
     "frame": {
         "name": "SOULPRINT",
@@ -8,6 +8,7 @@ const manifest = {
         "iconUrl": "https://soulprint-three.vercel.app/icon.png",
         "homeUrl": "https://soulprint-three.vercel.app",
         "imageUrl": "https://soulprint-three.vercel.app/hero.png",
+        "buttonTitle": "Analyze My DNA",
         "splashImageUrl": "https://soulprint-three.vercel.app/splash.png",
         "splashBackgroundColor": "#0A0A0F",
         "webhookUrl": "https://soulprint-three.vercel.app/api/webhook",
@@ -17,7 +18,12 @@ const manifest = {
         "heroImageUrl": "https://soulprint-three.vercel.app/hero.png",
         "screenshotUrls": [
             "https://soulprint-three.vercel.app/screenshot.png"
-        ]
+        ],
+        "tags": ["dna", "personality", "onchain", "base", "identity"],
+        "tagline": "Discover Your Blockchain DNA",
+        "ogTitle": "SOULPRINT - Your On-Chain DNA",
+        "ogDescription": "What's your blockchain personality? Analyze your on-chain activity and discover your unique digital DNA.",
+        "ogImageUrl": "https://soulprint-three.vercel.app/hero.png"
     },
     "accountAssociation": {
         "header": "eyJmaWQiOjMwNTM2OSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDRhNmVBQWUxMTkyQkM4Mzg5OTE5ZDRBMmNFQjZCRjcxMkQyNTJGODMifQ",
