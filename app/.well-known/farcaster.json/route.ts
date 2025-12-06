@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// Manifest with 'miniapp' key for Base.dev compatibility
+// Manifest with miniapp key and baseBuilder for Base.dev compatibility
 const manifest = {
     "accountAssociation": {
         "header": "eyJmaWQiOjMwNTM2OSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDRhNmVBQWUxMTkyQkM4Mzg5OTE5ZDRBMmNFQjZCRjcxMkQyNTJGODMifQ",
@@ -27,6 +27,9 @@ const manifest = {
         "ogTitle": "SOULPRINT - Your On-Chain DNA",
         "ogDescription": "Analyze your on-chain activity and discover your unique digital DNA.",
         "ogImageUrl": "https://soulprint-three.vercel.app/hero.png"
+    },
+    "baseBuilder": {
+        "ownerAddress": "0x5583101e8f0DcbAA99B58b0f141858166FE622ce"
     }
 };
 
