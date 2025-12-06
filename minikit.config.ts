@@ -3,10 +3,9 @@ const ROOT_URL = process.env.NEXT_PUBLIC_URL || "https://soulprint-three.vercel.
 
 export const minikitConfig = {
     accountAssociation: {
-        // These will be filled after deployment using base.dev account association tool
-        "header": "",
-        "payload": "",
-        "signature": ""
+        "header": "eyJmaWQiOjMwNTM2OSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDRhNmVBQWUxMTkyQkM4Mzg5OTE5ZDRBMmNFQjZCRjcxMkQyNTJGODMifQ",
+        "payload": "eyJkb21haW4iOiJzb3VscHJpbnQtdGhyZWUudmVyY2VsLmFwcCJ9",
+        "signature": "n+ebmqiyyEZatYAtKi9B9bsQfX5849CjeNNbr0wJiRkQe3yQDLBjP8dpJu0hY/g1mCW5AOCfci27RkaVMDgOSBw="
     },
     miniapp: {
         version: "1",
