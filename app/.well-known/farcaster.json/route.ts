@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// Hosted Manifest - Complete with noindex field
+// Hosted Manifest - All fields validated
 const manifest = {
     "frame": {
         "name": "SOULPRINT",
@@ -13,7 +13,7 @@ const manifest = {
         "splashBackgroundColor": "#0A0A0F",
         "webhookUrl": "https://soulprint-three.vercel.app/api/webhook",
         "subtitle": "Your On-Chain DNA",
-        "description": "Discover your unique blockchain identity. SOULPRINT analyzes your on-chain activity to create a unique digital DNA fingerprint. See your personality traits and rarity score.",
+        "description": "Discover your unique blockchain identity. Analyze your on-chain activity to reveal your digital DNA fingerprint and personality traits.",
         "primaryCategory": "social",
         "screenshotUrls": [
             "https://soulprint-three.vercel.app/screenshot.png"
