@@ -196,6 +196,14 @@ export default function Home() {
                             Farcaster
                         </a>
                     </p>
+                    <p className="footer-text" style={{ marginTop: '8px' }}>
+                        <a
+                            href="/terms-of-service"
+                            className="footer-link"
+                        >
+                            Terms of Service
+                        </a>
+                    </p>
                 </footer>
             </div>
         </div>
