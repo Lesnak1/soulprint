@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { DNAProfile } from "@/lib/dnaAnalyzer";
 import { Trait } from "@/lib/traits";
 import DNAHelix from "@/components/DNAHelix";
+import { useDNASignature } from "@/hooks/useDNASignature";
 
 interface DNACardProps {
     profile: DNAProfile;
@@ -14,6 +15,15 @@ interface DNACardProps {
 
 export default function DNACard({ profile, traits, onShare, onReset }: DNACardProps) {
     const traitEntries = Object.entries(profile.traits);
+    const { claimSignature, isPending, isSuccess, isError, txHash } = useDNASignature(profile);
+
+    const handleClaim = async () => {
+        try {
+            await claimSignature();
+        } catch (error) {
+            console.error("Failed to claim signature:", error);
+        }
+    };
 
     return (
         <motion.div
@@ -121,6 +131,56 @@ export default function DNACard({ profile, traits, onShare, onReset }: DNACardPr
                     </div>
                 </motion.div>
 
+                {/* Claim DNA Signature Button */}
+                <motion.div
+                    className="claim-section"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.3 }}
+                >
+                    {!isSuccess ? (
+                        <motion.button
+                            className={`btn-claim ${isPending ? 'pending' : ''}`}
+                            onClick={handleClaim}
+                            disabled={isPending}
+                            whileHover={!isPending ? { scale: 1.02 } : {}}
+                            whileTap={!isPending ? { scale: 0.98 } : {}}
+                        >
+                            {isPending ? (
+                                <>
+                                    <span className="claim-spinner"></span>
+                                    Claiming...
+                                </>
+                            ) : (
+                                <>
+                                    🔐 Claim DNA Signature
+                                </>
+                            )}
+                        </motion.button>
+                    ) : (
+                        <div className="claim-success">
+                            <span className="claim-success-icon">✅</span>
+                            <span className="claim-success-text">DNA Signature Claimed!</span>
+                            {txHash && (
+                                <a
+                                    href={`https://basescan.org/tx/${txHash}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="claim-tx-link"
+                                >
+                                    View on BaseScan →
+                                </a>
+                            )}
+                        </div>
+                    )}
+                    {isError && (
+                        <p className="claim-error">Failed to claim. Please try again.</p>
+                    )}
+                    <p className="claim-hint">
+                        Record your DNA on Base blockchain
+                    </p>
+                </motion.div>
+
                 {/* Action Buttons */}
                 <motion.div
                     className="button-container"
@@ -151,3 +211,4 @@ export default function DNACard({ profile, traits, onShare, onReset }: DNACardPr
         </motion.div>
     );
 }
+

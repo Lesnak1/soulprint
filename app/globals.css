@@ -1037,6 +1037,114 @@ body {
   z-index: 10;
 }
 
+/* ==================== DNA SIGNATURE CLAIM ==================== */
+
+.claim-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.btn-claim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  min-width: 220px;
+}
+
+.btn-claim:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-claim:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-claim.pending {
+  background: linear-gradient(135deg, #4b4b4b, #6b6b6b);
+}
+
+.claim-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.claim-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.claim-success-icon {
+  font-size: 24px;
+}
+
+.claim-success-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+.claim-tx-link {
+  font-size: 12px;
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.claim-tx-link:hover {
+  color: var(--primary);
+}
+
+.claim-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin: 0;
+}
+
+.claim-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+}
+
 /* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 480px) {
@@ -1059,5 +1167,11 @@ body {
   .btn-analyze {
     padding: 18px 28px;
     font-size: 14px;
+  }
+
+  .btn-claim {
+    min-width: 180px;
+    padding: 12px 20px;
+    font-size: 12px;
   }
 }
