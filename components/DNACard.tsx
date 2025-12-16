@@ -17,13 +17,10 @@ export default function DNACard({ profile, traits, onShare, onReset }: DNACardPr
     const traitEntries = Object.entries(profile.traits);
     const { claimSignature, isPending, isSuccess, isError, txHash } = useDNASignature(profile);
 
-    const handleClaim = async () => {
-        try {
-            await claimSignature();
-        } catch (error) {
-            console.error("Failed to claim signature:", error);
-        }
+    const handleClaim = () => {
+        claimSignature();
     };
+
 
     return (
         <motion.div
